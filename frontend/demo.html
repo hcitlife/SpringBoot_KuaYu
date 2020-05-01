@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>添加部门</title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: "http://localhost/ky/fun",
+                data: {p: "helloworld"},
+                dataType: "json",
+                success: function (res) {
+                    res = JSON.stringify(res);
+                    console.log(res);
+                    $("#show").text(res);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="show"></div>
+</body>
+</html>
